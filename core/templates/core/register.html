@@ -1,4 +1,54 @@
-{% extends 'base.html' %} 
-{% block content %}
-<h1>Register page </h1>
+{% extends 'base.html' %} {% block content %}
+<div class="flex flex-col justify-center">
+  <div class="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-4">
+    <div class="text-center mb-5">
+      <h1 class="text-3xl font-bold">Registration page</h1>
+    </div>
+    <form action="" method="POST">
+        {% csrf_token %}
+      <div class="space-y-6">
+        <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">First Name</label>
+              {{ form.first_name }}
+            </div>
+            <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">Last Name</label>
+              {{ form.last_name }}
+            </div>
+            <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">Username</label>
+              {{ form.username }}
+            </div>
+            <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">Email address</label>
+              {{ form.email }}
+            </div>
+            <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">Password</label>
+              {{ form.password1 }}
+            </div>
+            <div>
+              <label class="text-slate-900 text-sm font-medium mb-2 block">Confirm Password</label>
+              {{ form.password2 }}
+            </div>
+      </div>
+      <div class="mt-12">
+        <button
+          type="submit"
+          class="w-full py-3 px-4 text-sm tracking-wider font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer"
+        >
+          Create an account
+        </button>
+      </div>
+      <p class="text-slate-600 text-sm mt-6 text-center">
+        Already have an account?
+        <a
+          href="javascript:void(0);"
+          class="text-blue-600 font-medium hover:underline ml-1"
+          >Login here</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
 {% endblock content %}
