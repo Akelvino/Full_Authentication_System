@@ -1,0 +1,12 @@
+{% extends 'base.html' %} \
+{% block content %}
+<div class="flex items-center justify-center h-screen bg-gray-200 flex-col">
+    <span class="mb-5 font-bold text-5xl">Welcome {{user}}</span>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="px-6 py-3 text-lg font-semibold bg-gray-500 hover:bg-gray-700">
+            Logout
+        </button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .forms import UserRegistration, LoginForm
+from .forms import UserRegistration
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home(request):
     return render(request, 'core/index.html')
@@ -13,6 +14,6 @@ def RegisterView(request):
         form = UserRegistration()
     return render(request, 'core/register.html', {'form':form})
 
-def LoginView(request):
-    form = LoginForm()
-    return render(request, 'core/login.html', {'form':form})
+@login_required
+def welcome_page(request):
+    return render(request, 'core/welcomePage.html')
