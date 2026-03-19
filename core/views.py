@@ -19,3 +19,4 @@ def RegisterView(request):
 @login_required
 def welcome_page(request):
     return render(request, 'core/welcomePage.html')
+
