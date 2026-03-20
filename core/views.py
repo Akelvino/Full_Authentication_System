@@ -20,3 +20,29 @@ def RegisterView(request):
 def welcome_page(request):
     return render(request, 'core/welcomePage.html')
 
+
+
+
+# 
+#     <form action="" method="POST">
+#         {% csrf_token %}
+#       <div ">
+#         
+#         <div>
+#           <label class="text-slate-900 text-sm font-medium mb-2 block">Confirm Password</label>
+#           {{ form.password2 }}
+#         </div>
+#       </div>
+#       <div class="mt-12">
+#         <button
+#           type="submit"
+#           class="w-full py-3 px-4 text-sm tracking-wider font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer"
+#         >
+#           Confirm password
+#         </button>
+#       </div>
+#     </form>
+#   </div>
+# </div>
+# {% endblock content %} -->
+
